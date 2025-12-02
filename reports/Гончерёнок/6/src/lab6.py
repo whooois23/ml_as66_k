@@ -11,7 +11,7 @@ alpha_values = [0.001, 0.005, 0.01, 0.05, 0.1]
 
 def generate_data(a, b, c, d, t_start=0, t_end=30, step=0.1):
     t = np.arange(t_start, t_end + step, step)
-    y = c * np.sin(b * t) + a * np.cos(d * t)
+    y = c * np.sin(d * t) + a * np.cos(b * t)
     return t, y
 
 def sigmoid(x):
