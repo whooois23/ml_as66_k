@@ -1,4 +1,4 @@
-import numpy as np
+(import numpy as np
 import matplotlib.pyplot as plt
 
 a = 0.2
@@ -12,7 +12,7 @@ alpha_values = [0.001, 0.005, 0.01, 0.05, 0.1]
 
 def generate_data(a, b, c, d, t_start=0, t_end=10, step=0.1):
     t = np.arange(t_start, t_end + step, step)
-    y = a * np.sin(b * t) + c * t + d
+    y = a * np.sin(b * t) + np.cos(d * t)
     return t, y
 
 
@@ -196,4 +196,4 @@ for i in range(5):
 print("\n" + "=" * 60)
 print(f"Среднее отклонение на обучении: {np.mean(abs(Y_train - predictions_train)):.4f}")
 print(f"Среднее отклонение на тесте: {np.mean(abs(Y_test - predictions_test)):.4f}")
-print("=" * 60)
+print("=" * 60))
